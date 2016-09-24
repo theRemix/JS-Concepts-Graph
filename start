@@ -1,0 +1,43 @@
+:a "Module Pattern" "is a" "Design Pattern" .
+:a "Revealing Module Pattern" "is a" "Design Pattern" .
+:a "OOP" "is a" "Design Pattern" .
+:a "Revealing Module Pattern" "is related to" "Module Pattern" .
+:a "Module Pattern" "is related to" "Revealing Module Pattern" .
+:a "Revealing Module Pattern" "is related to" "Encapsulation" .
+:a "Encapsulation" "is related to" "Revealing Module Pattern" .
+:a "Revealing Module Pattern" "is related to" "Object Literal" .
+:a "Object Literal" "is related to" "Revealing Module Pattern" .
+:a "Encapsulation" "is related to" "OOP" .
+:a "OOP" "is related to" "Encapsulation" .
+
+:a "OOP" "is related to" "Class" .
+:a "OOP" "is related to" "Object" .
+:a "Object" "is related to" "OOP" .
+:a "Class" "is related to" "OOP" .
+:a "Class" "is related to" "Object" .
+:a "Object" "is related to" "Class" .
+:a "Object Literal" "is a" "Object" .
+:a "Array" "is a" "Object" .
+:a "Array" "is a" "Iterable" .
+:a "Array" "is related to" "Data Structure" .
+:a "Data Structure" "is related to" "Array" .
+:a "Linked List" "is a" "Iterable" .
+:a "Linked List" "is related to" "Data Structure" .
+:a "Data Structure" "is related to" "Linked List" .
+:a "Data Structure" "is related to" "Object Literal" .
+:a "Object Literal" "is related to" "Data Structure" .
+:a "Object Literal" "is related to" "Class" .
+:a "Class" "is related to" "Object Literal" .
+
+
+// should use .Both() for is related to, then direction doesn't matter, write one edge
+
+
+
+// g.V("Design Pattern").Tag("target").In("is a").Tag("source").All();
+// g.V("Module Pattern").Tag("source").Out("is related to").Tag("target").All();
+// g.V("Object Literal").Tag("source").Out("is related to").Tag("target").All();
+// g.V("Encapsulation").Tag("source").Out("is related to").Tag("target").All();
+// g.V("Revealing Module Pattern").Tag("source").Out("is related to").Tag("target").All();
+g.V("OOP").Tag("source").In("is related to").Tag("target").All();
+// g.V("OOP").Tag("source").Out("is a").Tag("target").All();
